@@ -1,0 +1,71 @@
+I"<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#tarefa-8" id="markdown-toc-tarefa-8">Tarefa 8</a>    <ul>
+      <li><a href="#descrição" id="markdown-toc-descrição">Descrição</a></li>
+      <li><a href="#programa" id="markdown-toc-programa">Programa</a>        <ul>
+          <li><a href="#saída" id="markdown-toc-saída">Saída</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="tarefa-8">Tarefa 8</h1>
+
+<h2 id="descrição">Descrição</h2>
+
+<p>Esta tarefa possuí a função implementada da tarefa 7 programa 3.</p>
+
+\[x(t)=x_{0}+v_{0}t+\frac{1}{2}{at^{2}}\]
+
+<h2 id="programa">Programa</h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def MRUV<span class="o">(</span>ac, t, vo, xo<span class="o">)</span>:
+     x <span class="o">=</span> xo +vo<span class="k">*</span>t + <span class="o">(</span>1/2<span class="k">*</span>ac<span class="k">*</span><span class="o">(</span>t<span class="k">**</span>2<span class="o">))</span>
+     <span class="k">return </span>x
+
+from math import pow
+
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 20<span class="o">)</span>
+print<span class="o">(</span><span class="s1">'Programa que executa o cálculo do MRUV'</span><span class="o">)</span>
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 20<span class="o">)</span>
+vo <span class="o">=</span> float<span class="o">(</span>input<span class="o">(</span><span class="s1">'Velocidade inicial (m/s): '</span><span class="o">))</span>
+ac <span class="o">=</span> float<span class="o">(</span>input<span class="o">(</span><span class="s1">'Aceleração (m/s²): '</span><span class="o">))</span>
+xo <span class="o">=</span> float<span class="o">(</span>input<span class="o">(</span><span class="s1">'Posição inicial (m): '</span><span class="o">))</span>
+t <span class="o">=</span> 0
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 10<span class="o">)</span>
+<span class="k">while </span>t &lt;<span class="o">=</span> 10:
+    x <span class="o">=</span> xo + vo <span class="k">*</span> t + <span class="o">(</span>ac <span class="k">*</span> pow<span class="o">(</span>t, 2<span class="o">))</span> / 2
+    t +<span class="o">=</span> 1
+    print<span class="o">(</span><span class="s1">'x({})= {:.2f} m'</span>.format<span class="o">(</span>t, x<span class="o">))</span>
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 10<span class="o">)</span>
+print<span class="o">(</span><span class="s1">'Programa finalizado'</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="saída">Saída</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa que executa o cálculo do MRUV
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Velocidade inicial (m/s): 2
+Aceleração (m/s²): 9
+Posição inicial (m): 0
+-=-=-=-=-=-=-=-=-=-=
+x(1)= 0.00 m
+x(2)= 6.50 m
+x(3)= 22.00 m
+x(4)= 46.50 m
+x(5)= 80.00 m
+x(6)= 122.50 m
+x(7)= 174.00 m
+x(8)= 234.50 m
+x(9)= 304.00 m
+x(10)= 382.50 m
+x(11)= 470.00 m
+-=-=-=-=-=-=-=-=-=-=
+Programa finalizado</code></pre></figure>
+
+<p>Tela Pycharm:</p>
+
+<p><img src="/~mcabral/A_distancia//img/tarefa8.png" alt="" /></p>
+:ET

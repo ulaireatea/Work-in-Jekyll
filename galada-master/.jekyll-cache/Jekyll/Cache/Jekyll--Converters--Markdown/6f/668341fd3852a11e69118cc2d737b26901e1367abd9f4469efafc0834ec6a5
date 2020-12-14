@@ -1,0 +1,146 @@
+I"c<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#guia-do-professor" id="markdown-toc-guia-do-professor">Guia do Professor</a>    <ul>
+      <li><a href="#código-python" id="markdown-toc-código-python">Código python</a></li>
+    </ul>
+  </li>
+  <li><a href="#guia-do-aluno" id="markdown-toc-guia-do-aluno">Guia do Aluno</a>    <ul>
+      <li><a href="#atividades-computacionais" id="markdown-toc-atividades-computacionais">Atividades computacionais</a></li>
+    </ul>
+  </li>
+  <li><a href="#aula" id="markdown-toc-aula">Aula</a>    <ul>
+      <li><a href="#gabarito-avaliação" id="markdown-toc-gabarito-avaliação">Gabarito avaliação</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="guia-do-professor">Guia do Professor</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conteúdo</th>
+      <th style="text-align: center">Habilidades</th>
+      <th style="text-align: right">Competências</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Obervação céu</td>
+      <td style="text-align: center">História da astronomia</td>
+      <td style="text-align: right">Compreensão participações</td>
+    </tr>
+    <tr>
+      <td>Força gravitacional</td>
+      <td style="text-align: center">Explanar lei gravitação</td>
+      <td style="text-align: right">Desenvolvimento matemático</td>
+    </tr>
+    <tr>
+      <td>Leis de Keppler</td>
+      <td style="text-align: center">Compreensão contextual</td>
+      <td style="text-align: right">Aplicação particular</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Objetivos</p>
+
+<ul>
+  <li>Explicar e dialogar com os alunos as questões históricas em relação aos fênomenos observados.</li>
+  <li>Elucidar o movimento do cosmos através de atração gravitacional.</li>
+  <li>Solucionar as relações do formulário útil (no ensino médio) das relações entre as grandezas envolvidas no estudo do movimento atrativo gravitacional entre os astros.</li>
+</ul>
+
+<p>Ações didáticas</p>
+
+<ul>
+  <li>Revisar conceitos de Força, Massa, Medidas de distância.</li>
+  <li>Ilustrar a construção da constante gravitacional</li>
+  <li>Relacionar intuitivamente as grandezas envolvidas e a aplicabilidade das mesmas entre o Macro (modelos estudados no momento) e a usuabilidade no Micro (introduzir discrepâncias) de modelos modernos de como existe, mas deve ser tratado diferenciado.</li>
+  <li>Revisar notação científica básica e aplicabilidade.</li>
+</ul>
+
+<p>Avaliações</p>
+
+<p>Avaliação será feita em 3 partes:</p>
+
+<ul>
+  <li>Participação em aula e nas atividades computacionais</li>
+  <li>Questionário dissertativo sobre as relações baseadas em fatos reais, sem supostos criados. (atividades propostas)</li>
+  <li>Prova com questões objetivas dos resultados específicos. (avalição)
+obs: Com todas avaliações tendo a mesma significatividade avaliativa.</li>
+</ul>
+
+<h2 id="código-python">Código python</h2>
+
+<p>Para criar gráficos 2D simulacionais e relacionar resultados pode ser utilizado este código python, a imagem gerada pode e deve ser editada usando Inkscape para melhores resolutados estéticos.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import matplotlib.pyplot as plt
+
+
+def draw_graph<span class="o">(</span>x, y<span class="o">)</span>:
+    plt.plot<span class="o">(</span>x, y, <span class="nv">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="o">)</span>
+    plt.xlabel<span class="o">(</span><span class="s1">'Distância (m)'</span><span class="o">)</span>
+    plt.ylabel<span class="o">(</span><span class="s1">'Força gravitacional (N)'</span><span class="o">)</span>
+    plt.title<span class="o">(</span><span class="s1">'Força Gravitacional'</span><span class="o">)</span>
+    plt.show<span class="o">()</span>
+
+
+def generate_F_r<span class="o">()</span>:
+    r <span class="o">=</span> range<span class="o">(</span>100, 1001, 50<span class="o">)</span>
+    F <span class="o">=</span> <span class="o">[]</span>
+
+    G <span class="o">=</span> 6.674 <span class="k">*</span> <span class="o">(</span>10 <span class="k">**</span> <span class="nt">-11</span><span class="o">)</span>
+    m1 <span class="o">=</span> 0.5
+    m2 <span class="o">=</span> 1.5
+
+    <span class="k">for </span>dist <span class="k">in </span>r:
+        force <span class="o">=</span> G <span class="k">*</span> <span class="o">(</span>m1 <span class="k">*</span> m2<span class="o">)</span> / <span class="o">(</span>dist <span class="k">**</span> 2<span class="o">)</span>
+        F.append<span class="o">(</span>force<span class="o">)</span>
+
+    draw_graph<span class="o">(</span>r, F<span class="o">)</span>
+
+
+<span class="k">if </span>__name__ <span class="o">==</span> <span class="s1">'__main__'</span>:
+    generate_F_r<span class="o">()</span>
+</code></pre></div></div>
+
+<p>Gráfico original em Python:</p>
+
+<p><img src="/~mcabral/A_distancia//img/Figure_1.svg" alt="" /></p>
+
+<p>Gráfico editado em Inkscape:</p>
+
+<p><img src="/~mcabral/A_distancia//img/t11black.png" alt="" /></p>
+
+<h1 id="guia-do-aluno">Guia do Aluno</h1>
+
+<p>Estrutura de conteúdos de Mecanica - Gravitação</p>
+
+<p>Nesta aula definiremos linearmente o conteúdo da gravitação para o final do primeiro ano do ensino médio.</p>
+
+<p>Abranger-se-a:</p>
+
+<ul>
+  <li>História da Astronômia limitado a questões históricas dentro do contexto momento estudantil do aluno</li>
+  <li>Figuras e nomes hitóricos para o desenvolvimento da área de astronômia na qualidade de lei da gravitação universal</li>
+  <li>Habilidades matemáticas básicas com a lei da gravitação universal</li>
+</ul>
+
+<h2 id="atividades-computacionais">Atividades computacionais</h2>
+
+<p>Utilizar o simulador para responder questões dissertativas propostas pelo professor, use tanto para simulações de cálculos como para satisfazer sua curiosidade, este aprendizado por ser fundamental para a compreensão do contéudo.</p>
+
+<iframe src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_pt_BR.html" width="600" height="400" scrolling="no" allowfullscreen=""></iframe>
+
+<p>Fonte<a href="https://phet.colorado.edu/pt_BR/simulation/gravity-and-orbits">PHET colorado</a></p>
+
+<h1 id="aula">Aula</h1>
+
+<p><a href="http://lief.if.ufrgs.br/~mcabral/A_distancia//projetoaula/">Gravitação</a></p>
+
+<h2 id="gabarito-avaliação">Gabarito avaliação</h2>
+
+<p><a href="http://lief.if.ufrgs.br/~mcabral/A_distancia//respostas/">Respostas</a></p>
+
+:ET

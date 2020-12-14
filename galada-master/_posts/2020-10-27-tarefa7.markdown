@@ -1,0 +1,137 @@
+---
+layout: post
+title:  Tarefa 7
+date:   2020-10-26 16:03:30 +0300
+image:  t7.png
+tags:   MetCompLic
+---
+**Conteúdo**
+* TOC
+{:toc}
+
+# Tarefa 7
+
+
+## Programa 1
+```sh
+print('Programa que exiba os primeiros 20 \nelementos da tabela de
+multiplicação por 7.')
+print('-=' * 20)
+a = 0
+while a <= 133:
+    print(a)
+    a += 7
+print('-=' * 20)
+print('Programa finalizado')
+```
+### Saída
+{% highlight html %}
+Programa que exiba os primeiros 20 
+elementos da tabela de multiplicação por 7.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+77
+84
+91
+98
+105
+112
+119
+126
+133
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa finalizado
+{% endhighlight %}
+
+Tela pycharm:
+
+![]({{site.baseurl}}/img/programa1.png)
+
+
+
+## Programa 2
+```sh
+print('\33[;32mPrograma que exibe a sequência de 12 números com \ncada
+elemento igual ao triplo do elemento anterior.\33[;32m')
+print('\33[4;32mUtilize os últimos dois digítos do seu cartão da UFRGS \ncomo primeiro elemento.\33[4;32m')
+print('\33[m-=\33[m' * 30)
+a = (int(input('\33[;34mDigite os dois últimos números do seu cartão
+UFRGS: \33[;34m')))
+while a < 6000000:
+    print(a)
+    a *= 3
+print('\33[m-=\33[m' * 30)
+print('\33[;32mPrograma finalizado\33[;32m')
+```
+### Saída
+{% highlight html %} 
+Programa que exibe a sequência de 12 números com 
+cada elemento igual ao triplo do elemento anterior.
+Utilize os últimos dois digítos do seu cartão da UFRGS 
+como primeiro elemento.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Digite os dois últimos números do seu cartão UFRGS: 33
+33
+99
+297
+891
+2673
+8019
+24057
+72171
+216513
+649539
+1948617
+5845851
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa finalizado
+{% endhighlight %}
+
+Tela pycharm:
+
+![]({{site.baseurl}}/img/programa2.png)
+
+
+
+## Programa 3
+```sh 
+from math import pow
+
+print('\33[;32m Programa que imprime a posição de um objeto \nem função do tempo em segundos partindo do repouso, para o MUV. \33[;32m')
+print('-=' * 30)
+t = float(input('\33[34mDigite um valor para o tempo em segundos: '))
+a = float(input('Digite um valor para a aceleração: '))
+s = a * (pow(t, 2)) / 2
+print('A posição do objeto que possui aceleração {}{:.1f} m/s²{} {}é{} {}{:.1f}{} metros'.format('\33[;33m', a, '\33[;33m', '\33[;34m', '\33[;34m', '\33[;33m', s, '\33[;33m'))
+print('\33[;32m-=' * 30)
+print('Programa finalizado\33[;32m')
+```
+
+### Saída
+
+{% highlight html %}
+ Programa que imprime a posição de um objeto 
+em função do tempo em segundos partindo do repouso, para o MUV. 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Digite um valor para o tempo em segundos: 4
+Digite um valor para a aceleração: 1.2
+A posição do objeto que possui aceleração 1.2 m/s² é 9.6 metros
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa finalizado
+{% endhighlight %}
+
+
+Tela pycharm:
+
+![]({{site.baseurl}}/img/programa3.png)
+

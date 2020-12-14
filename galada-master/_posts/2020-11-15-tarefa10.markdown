@@ -1,0 +1,50 @@
+---
+layout: post
+title:  Tarefa 10
+date:   2020-11-15 13:03:00 +0300
+image:  t10.png
+tags:   MetCompLic
+---
+**Conteúdo**
+* TOC
+{:toc}
+
+# Descrição da atividade
+
+ A partir de um tópico selecionado para a realização o Projeto 2, crie uma tabela de conteúdos a serem abordados na unidade didática, objetivos a serem atingidos, ações e formas de avaliação de cada objetivo.
+
+## Tabela de conteúdos
+
+{% highlight html %}
+* Gravitação
+* Força gravitacional
+* Leis de Keppler
+* Unidades astronômicas(notação)
+{% endhighlight %}
+
+## Objetivos
+
+{% highlight html %}
+* Explicar e dialogar com os alunos as questões históricas em relação aos fênomenos observados.
+* Elucidar o movimento do cosmos através de atração gravitacional.
+* Solucionar as relações do formulário útil (no ensino médio) das relações entre as grandezas envolvidas no estudo do movimento atrativo gravitacional entre os astros.
+{% endhighlight %}
+
+## Ações didáticas
+
+{% highlight html %}
+* Revisar conceitos de Força, Massa, Medidas de distância.
+* Ilustrar superficialmente a construção da constante gravitacional e seu experimento criada por Cavendish.
+* Relacionar intuitivamente as grandezas envolvidas e a aplicabilidade das mesmas entre o Macro (modelos estudados no momento) e a usuabilidade no Micro (introduzir discrepâncias) de modelos modernos de como existe, mas deve ser tratado diferenciado.
+* Revisar notação científica básica e aplicabilidade.
+{% endhighlight %}
+
+## Avaliações 
+
+{% highlight html %}
+Avaliação será feita em 3 partes:
+* Trabalho  apresentado, da relação de cada uma das leis, sem usuabilidade de resultados específicos.
+* Questionário dissertativo sobre as relações baseadas em fatos reais, sem supostos criados.
+* Prova com questões objetivas dos resultados específicos.
+(Com todas avaliações tendo a mesma significatividade avaliativa)
+{% endhighlight %}

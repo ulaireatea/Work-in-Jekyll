@@ -1,0 +1,71 @@
+---
+layout: post
+title:  Tarefa 8
+date:   2020-10-28 17:05:55 +0300
+image:  t8.png
+tags:   [MetCompLic]
+---
+**Conteúdo**
+* TOC
+{:toc}
+
+# Tarefa 8
+
+## Descrição
+
+Esta tarefa possuí a função implementada da tarefa 7 programa 3.
+
+$$ x(t)=x_{0}+v_{0}t+\frac{1}{2}{at^{2}} $$
+
+## Programa
+
+```sh
+def MRUV(ac, t, vo, xo):
+     x = xo +vo*t + (1/2*ac*(t**2))
+     return x
+
+from math import pow
+
+print('-=' * 20)
+print('Programa que executa o cálculo do MRUV')
+print('-=' * 20)
+vo = float(input('Velocidade inicial (m/s): '))
+ac = float(input('Aceleração (m/s²): '))
+xo = float(input('Posição inicial (m): '))
+t = 0
+print('-=' * 10)
+while t <= 10:
+    x = xo + vo * t + (ac * pow(t, 2)) / 2
+    t += 1
+    print('x({})= {:.2f} m'.format(t, x))
+print('-=' * 10)
+print('Programa finalizado')
+```
+
+### Saída
+{% highlight html %}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa que executa o cálculo do MRUV
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Velocidade inicial (m/s): 2
+Aceleração (m/s²): 9
+Posição inicial (m): 0
+-=-=-=-=-=-=-=-=-=-=
+x(1)= 0.00 m
+x(2)= 6.50 m
+x(3)= 22.00 m
+x(4)= 46.50 m
+x(5)= 80.00 m
+x(6)= 122.50 m
+x(7)= 174.00 m
+x(8)= 234.50 m
+x(9)= 304.00 m
+x(10)= 382.50 m
+x(11)= 470.00 m
+-=-=-=-=-=-=-=-=-=-=
+Programa finalizado
+{% endhighlight %}
+
+Tela Pycharm:
+
+![]({{site.baseurl}}/img/tarefa8.png)

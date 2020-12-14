@@ -1,0 +1,92 @@
+I"m
+<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#respostas-avaliação" id="markdown-toc-respostas-avaliação">Respostas avaliação</a>    <ul>
+      <li><a href="#questão-1" id="markdown-toc-questão-1">Questão 1:</a></li>
+      <li><a href="#questão-2" id="markdown-toc-questão-2">Questão 2:</a></li>
+      <li><a href="#questão-3" id="markdown-toc-questão-3">Questão 3:</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="respostas-avaliação">Respostas avaliação</h1>
+
+<p>Obs: para todas questões considerar:</p>
+
+<p>$ G=6.674 X 10^-{11}{\frac{\textbf{N}\cdotp\textbf{m}^2}{\textbf{kg}^2}} $</p>
+
+<h2 id="questão-1">Questão 1:</h2>
+
+<p>Considerando o raio da órbita da Terra e de Júpiter, qual o período de revolução de Júpiter em anos terrestres?</p>
+
+<p>$ R(Terra)=1.5 X 10^{11}{m} $</p>
+
+<p>$ R(Júpiter)=7.8 X 10^{11}{m} $</p>
+
+<ul>
+  <li>Solução:</li>
+</ul>
+
+<p>Considerando T(Terra)= 1 ano, período de revolução da Terra e aplicando a terceira lei de Kepler, temos;</p>
+
+<p>$ T²=k.r³ $ →</p>
+
+<p>$ {1.0}^{2}=k.{(1.5 X 10^{11})}^{3} $ →</p>
+
+<p>$ {1.0}=k.{(3.4 X 10^{33})} $ →</p>
+
+<p>$ k=3.0 X 10^{-34}\frac{ano^2}{m^3} $</p>
+
+<p>aplicando novamente a terceira lei para obter a revolução de Júpiter;</p>
+
+<p>$ T²=k.r³ $ →</p>
+
+<p>$ T²=3.0 X 10^{-34}.{(7.8 X 10^{11})}^{3} $ →</p>
+
+<p>$ T²=140 $ →</p>
+
+<p>T=12 anos terrestres</p>
+
+<h2 id="questão-2">Questão 2:</h2>
+
+<p>Calcule a força de atração gravitacional entre dois corpos de massa 1 Kg distantes a 1 m um do outro.</p>
+
+<p>Explique o resultado se a atração é forte, fraca e o por quê desta.</p>
+
+<ul>
+  <li>Solução:</li>
+</ul>
+
+<p>$ F=G.\frac{m1.m2}{r^2} $ →</p>
+
+<p>$ F=6.67 X 10^{-11}.\frac{1.1}{1^2} $ →</p>
+
+<p>$ F=6.67 X 10^{-11}.1 $ →</p>
+
+<p>$ F=6.67 X 10^{-11} N $ →</p>
+
+<p>Este resultado demonstra que os efeitos da força gravitacional são desprezíveis nas situações do dia-a-dia.
+Lembrando que o peso de um corpo de 100g é aproximadamente 1 N, ou seja 15 Bilhões de vezes maior que a intensidade da força de atração obtida.</p>
+
+<h2 id="questão-3">Questão 3:</h2>
+
+<p>Calcule a intensidade da atração gravitacional entre a Terra e a Lua, considerando as massas informadas abaixo e as distâncias(medidas dos seus respectivos centros).</p>
+
+<p>$ M(Terra)=6.0 X 10^{24}{Kg} $</p>
+
+<p>$ M(Lua)=7.4 X 10^{22}{Kg} $</p>
+
+<p>$ R(Terra-Lua)=3.8 X 10^{8} $</p>
+
+<ul>
+  <li>Solução:</li>
+</ul>
+
+<p>$ F=G.\frac{m1.m2}{r^2} $ →</p>
+
+<p>$ F=6.67 X 10^{-11}.\frac{(6.0 X 10^{24}).(7.4 X 10^{22})}{(3.8 X 10^{8})^2} $ →</p>
+
+<p>$ F=6.67 X 10^{-11}.(3.1 X 10^{30}) $ →</p>
+
+<p>$ F=2.1 X 10^{20} N $</p>
+:ET

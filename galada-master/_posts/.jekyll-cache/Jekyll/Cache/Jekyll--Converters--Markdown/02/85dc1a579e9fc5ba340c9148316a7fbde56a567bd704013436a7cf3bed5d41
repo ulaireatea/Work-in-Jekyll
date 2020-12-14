@@ -1,0 +1,109 @@
+I"�<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#contextualização-histórica" id="markdown-toc-contextualização-histórica">Contextualização histórica</a>    <ul>
+      <li><a href="#atividade" id="markdown-toc-atividade">Atividade:</a></li>
+    </ul>
+  </li>
+  <li><a href="#leis-de-keppler" id="markdown-toc-leis-de-keppler">Leis de Keppler</a>    <ul>
+      <li><a href="#atividade-1" id="markdown-toc-atividade-1">Atividade:</a></li>
+    </ul>
+  </li>
+  <li><a href="#lei-da-gravitação-universal" id="markdown-toc-lei-da-gravitação-universal">Lei da gravitação universal</a>    <ul>
+      <li><a href="#atividade-2" id="markdown-toc-atividade-2">Atividade:</a>        <ul>
+          <li><a href="#avaliação-matemática" id="markdown-toc-avaliação-matemática">Avaliação matemática:</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="contextualização-histórica">Contextualização histórica</h1>
+
+<p>Nos tempos passados, em todas civilizações, a obervação do céu pode ter sido a atividade mais importante e elegante feita pela humanidade.
+O Sol era quase (em algumas civilizações efetivamente) considerado um Deus, a Lua (que possui o “mesmo” tamanho do Sol) auxiliava na criação de lendas e crenças.
+As primeiras elucidações científicas buscavam a compreensão dos movimentos dos astros, as razões de existências das estrelas, o fato de serem fixas ou móveis (lembrando que estamos contextualizando conforme os povos primitivos pensavam) levaram a perguntas que todos povos tentaram responder.</p>
+
+<p>Os fênomenos observados, dias, noites, fases da lua, constelações se repetia com certa regularidade. Quando esta regularidade foi conceituada por alguns cientistas e entusiastas da época, o quesito organização possível dos astros começou a se solidificar.
+e deveria existir alguns critérios que poderiam ser atribuitos científicamente para explicar estes fatos.</p>
+
+<p>Obviamente o conceito inicial foi que tudo girava em torno da terra, o mais difícil era explicar os movimentos dos planetas em trajetórias circulares.
+O primeiro sistema planetário capaz de explicar estes movimentos celestes foi o Sistema Geocêntrico, proposto por Ptolomeu no início da era cristã.
+A teoria proposta a Terra ocupava o centro do universo, e tudo girava em torno dela, onde as órbitas do Sol e da Lua eram circulares, e os planetas tinham um conceito mais elaborado.
+Os planetas descreviam pequenos ciclos chamados de epiciclos, que também giravam ao redor da terra.
+E no fundo de tudo estavam as estrelas que eram supostamente fixas, o objetivo de Ptolomeu e o sistema geocêntrico baseava-se em explicar a variação da velocidade e do sentido destes movimentos.</p>
+
+<p>Já no século XVI, o astrônomo Copérnico prôpos um novo sistema de organização do universo, o Sistema Héliocêntrico, no qual o Sol ocupava o centro do universo, onde esta idéia já havia sido proposta na grécia por Aristarco de Samos, porém rejeitada pelos locais.
+Neste sistema a Terra era apenas mais um planeta que girava em torno do Sol e por conseguinte em torno dela mesma, ao redor da Terra girava a Lua, e ao redor de desta grande corrente circular de planetas estava uma esfera fixa onde estavam incrustadas as Estrelas.</p>
+
+<h2 id="atividade">Atividade:</h2>
+
+<p>Pense, antigamente no momento do sistema de copérnico a Terra ocupava o centro do universo, logo os navegadores se orientavam pelas estrelas! Considerando nossa tecnologia e sabermos de maneira inerte hoje como é realmente nosso universo, como se justificaria a assertividade destas navegações utilizando-se das estrelas neste meio de navegação.</p>
+
+<h1 id="leis-de-keppler">Leis de Keppler</h1>
+
+<p>Baseado nas observações feitas por Tycho Brahe, o astronômo Kepler formulou 3 leis de movimentos planetários, foram elas:</p>
+
+<p>I) As órbitas dos planetas são elípticas e o Sol se localiza em um dos seus focos.
+II) O segmento de reta traçado do Sol a qualquer planeta (raio vetor) descreve áreas iguais em tempos iguais.</p>
+
+<p><img src="/img/Kepler-second-law.svg" alt="" /></p>
+
+<p>Fonte: <a href="https://pt.wikipedia.org/wiki/Leis_de_Kepler#Terceira_lei_de_Kepler:_lei_dos_per%C3%ADodos">Wikipédia</a></p>
+
+<p>III) O quadrado do período de revolução (T²) de cada planeta em torno do Sol é diretamente proporcional ao cubo da distância média (r³) desse planeta ao Sol.</p>
+
+<p>Matemáticamente falando será:</p>
+
+\[T²=k.r³\]
+
+<p>Esta última, confirmaria a teoria de Copérnico, em órbitas elípticas com excentricidade muito mais perto de 0 do que de 1, logo praticamente circulares.</p>
+
+<h2 id="atividade-1">Atividade:</h2>
+
+<p>Pense, considerando o Sol num dos focos de uma elipse, (construa este desenho) e um planeta com a órbita nesta elipse, de maneira totalmente intuitiva e já conhecendo de conteúdos prévios relação de velocidade em relação a tempo e distância, em que ponto teria-se a velocidade máxima deste planeta e que ponto a mínima.</p>
+
+<h1 id="lei-da-gravitação-universal">Lei da gravitação universal</h1>
+
+<p>As leis de Kepler descrevem de maneira precisa os movimentos, porém não oferecem resposta ao causa destes movimentos matemáticamente.
+Isto coube a Isaac Newton a base teórica que fornceu-nos a resposta matemática:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	Duas partículas quaisquer se atraem com forças cuja intensidade é diretamente proporcional ao produto de suas massas e inversamente proporcional a distância entre elas.
+</code></pre></div></div>
+
+\[F=G{\frac{m_1 m_2}{r^2}}\]
+
+<p>onde G é a constante gravitacional cujo valor determinado experimentalmente por Cavendish é:</p>
+
+\[G=6.674 X 10^-{11}{\frac{\textbf{N}\cdotp\textbf{m}^2}{\textbf{kg}^2}}\]
+
+<p>Abaixo temos uma exemplificação da amplitude de aplicação desta importante lei:</p>
+
+<p><img src="/img/NewtonsLawOfUniversalGravitation.svg" alt="" /></p>
+
+<p>Fonte: <a href="https://pt.wikipedia.org/wiki/Lei_da_gravita%C3%A7%C3%A3o_universal">Wikipédia</a></p>
+
+<h2 id="atividade-2">Atividade:</h2>
+
+<p>Pense, se a lei da atração universal vale para tudo no universo, como dois objetos pequenos com o lápis e a borracha não se atraem em cima da mesa.</p>
+
+<h3 id="avaliação-matemática">Avaliação matemática:</h3>
+
+<p>1) Considerando o raio da órbita da Terra e de Júpiter, qual o período de revolução de Júpiter em anos terrestres?</p>
+
+<p>$ R(Terra)=1.5 X 10^{11}{m} $</p>
+
+<p>$ R(Júpiter)=7.8 X 10^{11}{m} $</p>
+
+<p>2) Calcule a força de atração gravitacional entre dois corpos de massa 1 Kg distantes a 1 m um do outro.</p>
+
+<p>Explique o resultado se a atração é forte, fraca e o por quê desta.</p>
+
+<p>3) Calcule a intensidade da atração gravitacional entre a Terra e a Lua, considerando as massas informadas abaixo e as distâncias(medidas dos seus respectivos centros).</p>
+
+<p>$ M(Terra)=6.0 X 10^{24}{Kg} $</p>
+
+<p>$ M(Lua)=7.4 X 10^{22}{Kg} $</p>
+
+<p>$ R(Terra-Lua)=3.8 X 10^{8} $</p>
+
+:ET

@@ -1,0 +1,45 @@
+#-------------------------------
+# General Site Settings
+
+title: Física à distância
+description: Este é um site para estimular a preocupação de por que estudamos física e onde nos encaixamos no mundo real. # this means to ignore newlines until "baseurl:"
+baseurl: "/~mcabral/A_distancia/" # the subpath of your site, e.g. /blog
+url: "http://127.0.0.1:4000/~mcabral/A_distancia//" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+#-------------------------------
+# About Section
+author-name:   Marcelo
+author-avatar: galada-main-page.jpg
+
+
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: ':title/'
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 7
+paginate_path: "/page/:num"
+
+include:
+  - _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+#-------------------------------
+# Exclude from processing.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

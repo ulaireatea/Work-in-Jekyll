@@ -1,0 +1,97 @@
+I"�<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#guia-do-professor" id="markdown-toc-guia-do-professor">Guia do Professor</a></li>
+  <li><a href="#guia-do-aluno" id="markdown-toc-guia-do-aluno">Guia do Aluno</a>    <ul>
+      <li><a href="#atividades-computacionais" id="markdown-toc-atividades-computacionais">Atividades computacionais</a></li>
+    </ul>
+  </li>
+  <li><a href="#aula" id="markdown-toc-aula">Aula</a>    <ul>
+      <li><a href="#gabarito-avaliação" id="markdown-toc-gabarito-avaliação">Gabarito avaliação</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="guia-do-professor">Guia do Professor</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conteúdo</th>
+      <th style="text-align: center">Habilidades</th>
+      <th style="text-align: right">Competências</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Obervação céu</td>
+      <td style="text-align: center">História da astronomia</td>
+      <td style="text-align: right">Compreensão participações</td>
+    </tr>
+    <tr>
+      <td>Força gravitacional</td>
+      <td style="text-align: center">Explanar lei gravitação</td>
+      <td style="text-align: right">Desenvolvimento matemático</td>
+    </tr>
+    <tr>
+      <td>Leis de Keppler</td>
+      <td style="text-align: center">Compreensão contextual</td>
+      <td style="text-align: right">Aplicação particular</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Objetivos</p>
+
+<ul>
+  <li>Explicar e dialogar com os alunos as questões históricas em relação aos fênomenos observados.</li>
+  <li>Elucidar o movimento do cosmos através de atração gravitacional.</li>
+  <li>Solucionar as relações do formulário útil (no ensino médio) das relações entre as grandezas envolvidas no estudo do movimento atrativo gravitacional entre os astros.</li>
+</ul>
+
+<p>Ações didáticas</p>
+
+<ul>
+  <li>Revisar conceitos de Força, Massa, Medidas de distância.</li>
+  <li>Ilustrar a construção da constante gravitacional</li>
+  <li>Relacionar intuitivamente as grandezas envolvidas e a aplicabilidade das mesmas entre o Macro (modelos estudados no momento) e a usuabilidade no Micro (introduzir discrepâncias) de modelos modernos de como existe, mas deve ser tratado diferenciado.</li>
+  <li>Revisar notação científica básica e aplicabilidade.</li>
+</ul>
+
+<p>Avaliações</p>
+
+<p>Avaliação será feita em 3 partes:</p>
+
+<ul>
+  <li>Participação em aula</li>
+  <li>Questionário dissertativo sobre as relações baseadas em fatos reais, sem supostos criados. (atividades propostas)</li>
+  <li>Prova com questões objetivas dos resultados específicos. (avalição)
+obs: Com todas avaliações tendo a mesma significatividade avaliativa.</li>
+</ul>
+
+<h1 id="guia-do-aluno">Guia do Aluno</h1>
+
+<p>Estrutura de conteúdos de Mecanica - Gravitação</p>
+
+<p>Nesta aula definiremos linearmente o conteúdo da gravitação para o final do primeiro ano do ensino médio.</p>
+
+<p>Abranger-se-a:</p>
+
+<ul>
+  <li>História da Astronômia limitado a questões históricas dentro do contexto momento estudantil do aluno</li>
+  <li>Figuras e nomes hitóricos para o desenvolvimento da área de astronômia na qualidade de lei da gravitação universal</li>
+  <li>Habilidades matemáticas básicas com a lei da gravitação universal</li>
+</ul>
+
+<h2 id="atividades-computacionais">Atividades computacionais</h2>
+
+<iframe src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_pt_BR.html" width="800" height="600" scrolling="no" allowfullscreen=""></iframe>
+
+<h1 id="aula">Aula</h1>
+
+<p><a href="http://lief.if.ufrgs.br/~mcabral/A_distancia//projetoaula/">Gravitação</a></p>
+
+<h2 id="gabarito-avaliação">Gabarito avaliação</h2>
+
+<p><a href="http://lief.if.ufrgs.br/~mcabral/A_distancia//respostas/">Respostas</a></p>
+
+:ET

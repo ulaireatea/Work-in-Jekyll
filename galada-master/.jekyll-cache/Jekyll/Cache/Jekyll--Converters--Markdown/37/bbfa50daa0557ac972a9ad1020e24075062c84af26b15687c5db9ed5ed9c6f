@@ -1,0 +1,173 @@
+I"_*<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#descrição-do-movimento-harmônico-simples" id="markdown-toc-descrição-do-movimento-harmônico-simples">Descrição do movimento harmônico simples</a>    <ul>
+      <li><a href="#ilustração-sistema-massa-mola" id="markdown-toc-ilustração-sistema-massa-mola">Ilustração sistema massa-mola</a>        <ul>
+          <li><a href="#entrada" id="markdown-toc-entrada">Entrada</a></li>
+          <li><a href="#saída---plotagem-do-gráfico-do-mhs" id="markdown-toc-saída---plotagem-do-gráfico-do-mhs">Saída - Plotagem do Gráfico do MHS</a>            <ul>
+              <li><a href="#curiosidades" id="markdown-toc-curiosidades">Curiosidades</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="descrição-do-movimento-harmônico-simples">Descrição do movimento harmônico simples</h1>
+
+<p>Movimento massa-mola, é um sistema fisíco supondo uma mola ideal de constante elástica K, presa a um objeto de massa M.
+A compressão desta mola gera uma energia potencial elástica que ao ser liberada é convertida em energia cinética.
+Possui ao ser liberada uma força restauradora que devolve de maneira elástica a sua posição ao equilíbrio, o sistema é composto de um comprimento de alongamento X, uma amplitude de movimento A, um período T que é o tempo que ela percorre uma oscilação completa, a frequência de oscilação que é o número de oscilações por segundo, a velocidade angular W que indica a velocidade com a qual a mola oscila e sua fase (theta) que indica a ponto inicial onde o obejto oscilador inicia o seu trajeto oscilatório.</p>
+
+<p>Usando a Lei de Hooke definida de sistema de força elástica:</p>
+
+<p>$ F = -k.x $</p>
+
+<p>Com esta equação definimos a força elástica do sistema usando os valores definidos em sua descrição da mola ideal.
+Com a segunda lei de Newton abaixo conseguimos unir e chegarmos a um sistema.</p>
+
+<p>2º lei de Newton:</p>
+
+<p>$ F = m.\frac{d^2x}{dt^2} $</p>
+
+<p>Compilando ambas equações, considerando as forças sendo a única e a mesma intereção e isolando a váriavel posição X, temos:</p>
+
+<p>$ x(t)=A.cos(\sqrt{\frac{k}{m}}.t+\theta_{0}) $</p>
+
+<p>Esta é a equação do movimento harmônico simples.</p>
+
+<h2 id="ilustração-sistema-massa-mola">Ilustração sistema massa-mola</h2>
+
+<p><img src="/~mcabral/A_distancia//img/massamola.png" alt="" /></p>
+
+<h3 id="entrada">Entrada</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Biliotecas:</span>
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+<span class="c"># Função:</span>
+def MHS<span class="o">(</span>A, k, m, t, theta0<span class="o">)</span>:
+    x <span class="o">=</span> A <span class="k">*</span> np.cos<span class="o">(</span>np.sqrt<span class="o">(</span>k / m<span class="o">)</span> <span class="k">*</span> t + theta0<span class="o">)</span>
+    <span class="k">return</span> <span class="o">(</span>x<span class="o">)</span>
+
+
+<span class="c"># valores definidos para simulação:</span>
+A <span class="o">=</span> 0.5
+k <span class="o">=</span> 2.4
+m <span class="o">=</span> 0.35
+t0 <span class="o">=</span> 0
+tf <span class="o">=</span> 14
+theta0 <span class="o">=</span> 0
+
+<span class="c">#Valores definidos no SI</span>
+
+<span class="c"># Plotagem do gráfico:</span>
+def MHSplot<span class="o">(</span>A, k, m, t0, tf, theta0, N<span class="o">)</span>:
+    t <span class="o">=</span> np.linspace<span class="o">(</span>t0, tf, N<span class="o">)</span>
+    x <span class="o">=</span> MHS<span class="o">(</span>A, k, m, t, theta0<span class="o">)</span>
+    plt.plot<span class="o">(</span>t, x, <span class="nv">color</span><span class="o">=</span><span class="s2">"green"</span>, <span class="nv">label</span><span class="o">=</span><span class="s2">"Sistema Massa-Mola"</span><span class="o">)</span>
+    plt.legend<span class="o">(</span><span class="nv">loc</span><span class="o">=</span><span class="s1">'upper left'</span><span class="o">)</span>
+    plt.xlabel<span class="o">(</span><span class="s2">"Eixo Temporal (s)"</span><span class="o">)</span>
+    plt.ylabel<span class="o">(</span><span class="s2">"Eixo posicional (m)"</span><span class="o">)</span>
+    plt.savefig<span class="o">(</span><span class="s2">"Graficomovimento.png"</span><span class="o">)</span>
+
+
+MHSplot<span class="o">(</span>A, k, m, t0, tf, theta0, 100<span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="saída---plotagem-do-gráfico-do-mhs">Saída - Plotagem do Gráfico do MHS</h3>
+
+<p><img src="/~mcabral/A_distancia//img/Graficomovimento.png" alt="" /></p>
+
+<h4 id="curiosidades">Curiosidades</h4>
+
+<p>Para o movimento harmônico amortecido, podemos usar a equação de Euler da mesma maneira como fizemos no python para o MHS.
+Abaixo é possível ter uma idéia da relação de entre equação do método de Euler e o gráfico do movimento.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Biliotecas utilizadas no Pycharm</span>
+import math
+
+from PIL import ImageDraw, Image
+
+<span class="c"># Ambiente gráfico</span>
+imgx <span class="o">=</span> 900
+imgy <span class="o">=</span> 500
+image <span class="o">=</span> Image.new<span class="o">(</span><span class="s2">"RGB"</span>, <span class="o">(</span>imgx, imgy<span class="o">))</span>
+draw <span class="o">=</span> ImageDraw.Draw<span class="o">(</span>image<span class="o">)</span>
+
+
+<span class="c"># Definição da equação de Euler utilizada para gerar simulação</span>
+def Euler2<span class="o">(</span>f, xa, xb, ya, y1a, n<span class="o">)</span>:
+    h <span class="o">=</span> <span class="o">(</span>xb - xa<span class="o">)</span> / float<span class="o">(</span>n<span class="o">)</span>
+    x <span class="o">=</span> xa
+    y <span class="o">=</span> ya
+    y1 <span class="o">=</span> y1a
+    <span class="k">for </span>i <span class="k">in </span>range<span class="o">(</span>n<span class="o">)</span>:
+        y1 +<span class="o">=</span> h <span class="k">*</span> f<span class="o">(</span>x, y, y1<span class="o">)</span>
+        y +<span class="o">=</span> h <span class="k">*</span> y1
+        x +<span class="o">=</span> h
+    <span class="k">return</span> <span class="o">[</span>y, y1]
+
+
+<span class="c"># Valores randomizados para execução da simulação</span>
+m <span class="o">=</span> 2.0  <span class="c"># massa (kg)</span>
+F0 <span class="o">=</span> 4.76  <span class="c"># Amplitude da força (N)</span>
+omega <span class="o">=</span> 0.36  <span class="c"># frequencia angular (rad/s)</span>
+phi <span class="o">=</span> 0.0  <span class="c"># constante de fase (rad)</span>
+b <span class="o">=</span> 0.0  <span class="c"># constante de atrito (carater informativo apenas) (Ns/m)</span>
+k <span class="o">=</span> 20.0  <span class="c"># constante da mola (N/m)</span>
+
+
+<span class="c"># Equação Euler para movimento amortecido massa mola</span>
+def f<span class="o">(</span>x, y, y1<span class="o">)</span>:
+    <span class="k">return</span> <span class="o">(</span>F0 <span class="k">*</span> math.cos<span class="o">(</span>omega <span class="k">*</span> x - phi<span class="o">)</span> - b <span class="k">*</span> y1 - k <span class="k">*</span> y<span class="o">)</span> / m
+
+
+<span class="c"># Posicional do gráfico</span>
+yaSim <span class="o">=</span> 0.0  <span class="c"># posição inicial (m)</span>
+y1aSim <span class="o">=</span> 0.0  <span class="c"># velocidade inicial (m/s)</span>
+n <span class="o">=</span> 1000  <span class="c"># nº passos para Euler</span>
+xaSim <span class="o">=</span> 0.0  <span class="c"># tempo inicial (s)</span>
+xbSim <span class="o">=</span> 100.0  <span class="c"># tempo final (s)</span>
+xdSim <span class="o">=</span> xbSim - xaSim  <span class="c"># deltaT</span>
+nSim <span class="o">=</span> 1000  <span class="c"># nº passos simulação</span>
+
+<span class="c"># Máximos e minímos definidos para o gráfico</span>
+ya <span class="o">=</span> yaSim
+y1a <span class="o">=</span> y1aSim
+yMin <span class="o">=</span> ya
+yMax <span class="o">=</span> ya
+<span class="k">for </span>i <span class="k">in </span>range<span class="o">(</span>nSim<span class="o">)</span>:
+    xa <span class="o">=</span> xaSim + xdSim <span class="k">*</span> i / nSim
+    xb <span class="o">=</span> xaSim + xdSim <span class="k">*</span> <span class="o">(</span>i + 1<span class="o">)</span> / nSim
+    y_y1 <span class="o">=</span> Euler2<span class="o">(</span>f, xa, xb, ya, y1a, n<span class="o">)</span>
+    ya <span class="o">=</span> y_y1[0]
+    y1a <span class="o">=</span> y_y1[1]
+    <span class="k">if </span>ya &lt; yMin:
+        yMin <span class="o">=</span> ya
+    <span class="k">if </span>ya <span class="o">&gt;</span> yMax:
+        yMax <span class="o">=</span> ya
+
+<span class="c"># Definição do Range com movimento simulado:</span>
+ya <span class="o">=</span> yaSim
+y1a <span class="o">=</span> y1aSim
+<span class="k">for </span>i <span class="k">in </span>range<span class="o">(</span>nSim<span class="o">)</span>:
+    xa <span class="o">=</span> xaSim + xdSim <span class="k">*</span> i / nSim
+    xb <span class="o">=</span> xaSim + xdSim <span class="k">*</span> <span class="o">(</span>i + 1<span class="o">)</span> / nSim
+    kxa <span class="o">=</span> <span class="o">(</span>imgx - 1<span class="o">)</span> <span class="k">*</span> <span class="o">(</span>xa - xaSim<span class="o">)</span> / xdSim
+    kya <span class="o">=</span> <span class="o">(</span>imgy - 1<span class="o">)</span> <span class="k">*</span> <span class="o">(</span>ya - yMin<span class="o">)</span> / <span class="o">(</span>yMax - yMin<span class="o">)</span>
+    y_y1 <span class="o">=</span> Euler2<span class="o">(</span>f, xa, xb, ya, y1a, n<span class="o">)</span>
+    ya <span class="o">=</span> y_y1[0]
+    y1a <span class="o">=</span> y_y1[1]
+    kxb <span class="o">=</span> <span class="o">(</span>imgx - 1<span class="o">)</span> <span class="k">*</span> <span class="o">(</span>xb - xaSim<span class="o">)</span> / xdSim
+    kyb <span class="o">=</span> <span class="o">(</span>imgy - 1<span class="o">)</span> <span class="k">*</span> <span class="o">(</span>ya - yMin<span class="o">)</span> / <span class="o">(</span>yMax - yMin<span class="o">)</span>
+    draw.line<span class="o">((</span>kxa, kya, kxb, kyb<span class="o">)</span>, <span class="o">(</span>0, 255, 0<span class="o">))</span>  <span class="c"># (r, g, b)</span>
+
+image.save<span class="o">(</span><span class="s1">'Gráfico.png'</span>, <span class="s2">"PNG"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p><img src="/~mcabral/A_distancia//img/Gráfico.png" alt="" /></p>
+
+:ET

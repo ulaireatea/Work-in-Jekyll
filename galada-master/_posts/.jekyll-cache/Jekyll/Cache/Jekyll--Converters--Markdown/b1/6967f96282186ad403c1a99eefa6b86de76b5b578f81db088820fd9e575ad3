@@ -1,0 +1,171 @@
+I"r<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#descrição-do-movimento-harmônico-simples" id="markdown-toc-descrição-do-movimento-harmônico-simples">Descrição do movimento harmônico simples</a>    <ul>
+      <li><a href="#ilustração-sistema-massa-mola" id="markdown-toc-ilustração-sistema-massa-mola">Ilustração sistema massa-mola</a>        <ul>
+          <li><a href="#entrada" id="markdown-toc-entrada">Entrada</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#função" id="markdown-toc-função">Função:</a></li>
+  <li><a href="#valores-definidos-para-simulação" id="markdown-toc-valores-definidos-para-simulação">valores definidos para simulação:</a></li>
+  <li><a href="#plotagem-do-gráfico" id="markdown-toc-plotagem-do-gráfico">Plotagem do gráfico:</a></li>
+</ul>
+
+<h1 id="descrição-do-movimento-harmônico-simples">Descrição do movimento harmônico simples</h1>
+
+<p>Movimento massa-mola, é um sistema fisíco supondo uma mola ideal de constante elástica K, presa a um objeto de massa M.
+A compressão desta mola gera uma energia potencial elástica que ao ser liberada é convertida em energia cinética.
+Possui ao ser liberada uma força restauradora que devolve de maneira elástica a sua posição ao equilíbrio, o sistema é composto de um comprimento de alongamento X, uma amplitude de movimento A, um período T que é o tempo que ela percorre uma oscilação completa, a frequência de oscilação que é o número de oscilações por segundo, a velocidade angular W que indica a velocidade com a qual a mola oscila e sua fase (theta) que indica a ponto inicial onde o obejto oscilador inicia o seu trajeto oscilatório.</p>
+
+<p>Usando a Lei de Hooke definida de sistema de força elástica:</p>
+
+<p>$ F = -k.x $</p>
+
+<p>Com esta equação definimos a força elástica do sistema usando os valores definidos em sua descrição da mola ideal.
+Com a segunda lei de Newton abaixo conseguimos unir e chegarmos a um sistema.</p>
+
+<p>2º lei de Newton:</p>
+
+<p>$ F = m.\frac{d^2x}{dt^2} $</p>
+
+<p>Compilando ambas equações, considerando as forças sendo a única e a mesma intereção e isolando a váriavel posição X, temos:</p>
+
+<p>$ x(t)=A.cos(\sqrt{\frac{k}{m}}.t+\theta_{0}) $</p>
+
+<p>Esta é a equação do movimento harmônico simples.</p>
+
+<h2 id="ilustração-sistema-massa-mola">Ilustração sistema massa-mola</h2>
+
+<p><img src="/img/massamola.png" alt="" /></p>
+
+<h3 id="entrada">Entrada</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+import numpy as np
+import matplotlib.pyplot as plt
+</code></pre></div></div>
+
+<h1 id="função">Função:</h1>
+<p>def MHS(A, k, m, t, theta0):
+    x = A * np.cos(np.sqrt(k / m) * t + theta0)
+    return (x)</p>
+
+<h1 id="valores-definidos-para-simulação">valores definidos para simulação:</h1>
+<p>A = 0.5
+k = 2.4
+m = 0.35
+t0 = 0
+tf = 14
+theta0 = 0</p>
+
+<p>#Valores definidos no SI</p>
+
+<h1 id="plotagem-do-gráfico">Plotagem do gráfico:</h1>
+<p>def MHSplot(A, k, m, t0, tf, theta0, N):
+    t = np.linspace(t0, tf, N)
+    x = MHS(A, k, m, t, theta0)
+    plt.plot(t, x, color=”green”, label=”Sistema Massa-Mola”)
+    plt.legend(loc=’upper left’)
+    plt.xlabel(“Eixo Temporal (s)”)
+    plt.ylabel(“Eixo posicional (m)”)
+    plt.savefig(“Graficomovimento.png”)</p>
+
+<p>MHSplot(A, k, m, t0, tf, theta0, 100)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+### Saída - Plotagem do Gráfico do MHS
+
+![](/img/Graficomovimento.png)
+
+#### Curiosidades
+
+Para o movimento harmônico amortecido, podemos usar a equação de Euler da mesma maneira como fizemos no python para o MHS.
+Abaixo é possível ter uma idéia da relação de entre equação do método de Euler e o gráfico do movimento.
+
+```sh
+# Biliotecas utilizadas no Pycharm
+import math
+
+from PIL import ImageDraw, Image
+
+# Ambiente gráfico
+imgx = 900
+imgy = 500
+image = Image.new("RGB", (imgx, imgy))
+draw = ImageDraw.Draw(image)
+
+
+# Definição da equação de Euler utilizada para gerar simulação
+def Euler2(f, xa, xb, ya, y1a, n):
+    h = (xb - xa) / float(n)
+    x = xa
+    y = ya
+    y1 = y1a
+    for i in range(n):
+        y1 += h * f(x, y, y1)
+        y += h * y1
+        x += h
+    return [y, y1]
+
+
+# Valores randomizados para execução da simulação
+m = 2.0  # massa (kg)
+F0 = 4.76  # Amplitude da força (N)
+omega = 0.36  # frequencia angular (rad/s)
+phi = 0.0  # constante de fase (rad)
+b = 0.0  # constante de atrito (carater informativo apenas) (Ns/m)
+k = 20.0  # constante da mola (N/m)
+
+
+# Equação Euler para movimento amortecido massa mola
+def f(x, y, y1):
+    return (F0 * math.cos(omega * x - phi) - b * y1 - k * y) / m
+
+
+# Posicional do gráfico
+yaSim = 0.0  # posição inicial (m)
+y1aSim = 0.0  # velocidade inicial (m/s)
+n = 1000  # nº passos para Euler
+xaSim = 0.0  # tempo inicial (s)
+xbSim = 100.0  # tempo final (s)
+xdSim = xbSim - xaSim  # deltaT
+nSim = 1000  # nº passos simulação
+
+# Máximos e minímos definidos para o gráfico
+ya = yaSim
+y1a = y1aSim
+yMin = ya
+yMax = ya
+for i in range(nSim):
+    xa = xaSim + xdSim * i / nSim
+    xb = xaSim + xdSim * (i + 1) / nSim
+    y_y1 = Euler2(f, xa, xb, ya, y1a, n)
+    ya = y_y1[0]
+    y1a = y_y1[1]
+    if ya &lt; yMin:
+        yMin = ya
+    if ya &gt; yMax:
+        yMax = ya
+
+# Definição do Range com movimento simulado:
+ya = yaSim
+y1a = y1aSim
+for i in range(nSim):
+    xa = xaSim + xdSim * i / nSim
+    xb = xaSim + xdSim * (i + 1) / nSim
+    kxa = (imgx - 1) * (xa - xaSim) / xdSim
+    kya = (imgy - 1) * (ya - yMin) / (yMax - yMin)
+    y_y1 = Euler2(f, xa, xb, ya, y1a, n)
+    ya = y_y1[0]
+    y1a = y_y1[1]
+    kxb = (imgx - 1) * (xb - xaSim) / xdSim
+    kyb = (imgy - 1) * (ya - yMin) / (yMax - yMin)
+    draw.line((kxa, kya, kxb, kyb), (0, 255, 0))  # (r, g, b)
+
+image.save('Gráfico.png', "PNG")
+</code></pre></div></div>
+
+<p><img src="/img/Gráfico.png" alt="" /></p>
+
+:ET

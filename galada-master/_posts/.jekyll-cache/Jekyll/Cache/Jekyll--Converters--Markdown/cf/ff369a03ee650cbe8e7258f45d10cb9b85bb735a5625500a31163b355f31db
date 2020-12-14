@@ -1,0 +1,125 @@
+I"�<p><strong>Conteúdo</strong></p>
+
+<p><em>Tarefa 7
+**Programa 1
+**</em>Saída
+<em>*Programa 2
+**</em>Saída
+<em>*Programa 3
+**</em>Saída</p>
+
+<p>[:Tarefa 7}</p>
+
+<p>##Programa 1</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print<span class="o">(</span><span class="s1">'Programa que exiba os primeiros 20 \nelementos da tabela de
+multiplicação por 7.'</span><span class="o">)</span>
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 20<span class="o">)</span>
+a <span class="o">=</span> 0
+<span class="k">while </span>a &lt;<span class="o">=</span> 133:
+    print<span class="o">(</span>a<span class="o">)</span>
+    a +<span class="o">=</span> 7
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 20<span class="o">)</span>
+print<span class="o">(</span><span class="s1">'Programa finalizado'</span><span class="o">)</span>
+</code></pre></div></div>
+<p>###Saída</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">Programa que exiba os primeiros 20 
+elementos da tabela de multiplicação por 7.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+77
+84
+91
+98
+105
+112
+119
+126
+133
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa finalizado</code></pre></figure>
+
+<p>Tela pycharm:</p>
+
+<p><img src="/img/programa1.png" alt="" /></p>
+
+<p>##Programa 2</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print<span class="o">(</span><span class="s1">'\33[;32mPrograma que exibe a sequência de 12 números com \ncada
+elemento igual ao triplo do elemento anterior.\33[;32m'</span><span class="o">)</span>
+print<span class="o">(</span><span class="s1">'\33[4;32mUtilize os últimos dois digítos do seu cartão da UFRGS \ncomo primeiro elemento.\33[4;32m'</span><span class="o">)</span>
+print<span class="o">(</span><span class="s1">'\33[m-=\33[m'</span> <span class="k">*</span> 30<span class="o">)</span>
+a <span class="o">=</span> <span class="o">(</span>int<span class="o">(</span>input<span class="o">(</span><span class="s1">'\33[;34mDigite os dois últimos números do seu cartão
+UFRGS: \33[;34m'</span><span class="o">)))</span>
+<span class="k">while </span>a &lt; 6000000:
+    print<span class="o">(</span>a<span class="o">)</span>
+    a <span class="k">*</span><span class="o">=</span> 3
+print<span class="o">(</span><span class="s1">'\33[m-=\33[m'</span> <span class="k">*</span> 30<span class="o">)</span>
+print<span class="o">(</span><span class="s1">'\33[;32mPrograma finalizado\33[;32m'</span><span class="o">)</span>
+</code></pre></div></div>
+<p>###Saída</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> 
+Programa que exibe a sequência de 12 números com 
+cada elemento igual ao triplo do elemento anterior.
+Utilize os últimos dois digítos do seu cartão da UFRGS 
+como primeiro elemento.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Digite os dois últimos números do seu cartão UFRGS: 33
+33
+99
+297
+891
+2673
+8019
+24057
+72171
+216513
+649539
+1948617
+5845851
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa finalizado</code></pre></figure>
+
+<p>Tela pycharm:</p>
+
+<p><img src="/img/programa2.png" alt="" /></p>
+
+<p>##Programa 3</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from math import pow
+
+print<span class="o">(</span><span class="s1">'\33[;32m Programa que imprime a posição de um objeto \nem função do tempo em segundos partindo do repouso, para o MUV. \33[;32m'</span><span class="o">)</span>
+print<span class="o">(</span><span class="s1">'-='</span> <span class="k">*</span> 30<span class="o">)</span>
+t <span class="o">=</span> float<span class="o">(</span>input<span class="o">(</span><span class="s1">'\33[34mDigite um valor para o tempo em segundos: '</span><span class="o">))</span>
+a <span class="o">=</span> float<span class="o">(</span>input<span class="o">(</span><span class="s1">'Digite um valor para a aceleração: '</span><span class="o">))</span>
+s <span class="o">=</span> a <span class="k">*</span> <span class="o">(</span>pow<span class="o">(</span>t, 2<span class="o">))</span> / 2
+print<span class="o">(</span><span class="s1">'A posição do objeto que possui aceleração {}{:.1f} m/s²{} {}é{} {}{:.1f}{} metros'</span>.format<span class="o">(</span><span class="s1">'\33[;33m'</span>, a, <span class="s1">'\33[;33m'</span>, <span class="s1">'\33[;34m'</span>, <span class="s1">'\33[;34m'</span>, <span class="s1">'\33[;33m'</span>, s, <span class="s1">'\33[;33m'</span><span class="o">))</span>
+print<span class="o">(</span><span class="s1">'\33[;32m-='</span> <span class="k">*</span> 30<span class="o">)</span>
+print<span class="o">(</span><span class="s1">'Programa finalizado\33[;32m'</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>###Saída</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> Programa que imprime a posição de um objeto 
+em função do tempo em segundos partindo do repouso, para o MUV. 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Digite um valor para o tempo em segundos: 4
+Digite um valor para a aceleração: 1.2
+A posição do objeto que possui aceleração 1.2 m/s² é 9.6 metros
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Programa finalizado</code></pre></figure>
+
+<p>Tela pycharm:</p>
+
+<p><img src="/img/programa3.png" alt="" /></p>
+
+:ET

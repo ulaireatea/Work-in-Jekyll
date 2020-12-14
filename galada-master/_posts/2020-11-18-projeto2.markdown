@@ -1,0 +1,121 @@
+---
+layout: post
+title:  Unidade didática REA
+date:   2020-11-18 10:07:55 +0300
+image:  p2capa.png
+tags:   [Projeto 2]
+---
+**Conteúdo**
+* TOC
+{:toc}
+
+# Guia do Professor
+
+| Conteúdo             | Habilidades             | Competências              |
+| -----------------    |:-----------------------:| -------------------------:|
+| Obervação céu        | História da astronomia  | Compreensão participações |
+| Força gravitacional  | Explanar lei gravitação | Desenvolvimento matemático|
+| Leis de Keppler      | Compreensão contextual  | Aplicação particular      |
+
+
+Objetivos
+
+* Explicar e dialogar com os alunos as questões históricas em relação aos fênomenos observados.
+* Elucidar o movimento do cosmos através de atração gravitacional.
+* Solucionar as relações do formulário útil (no ensino médio) das relações entre as grandezas envolvidas no estudo do movimento atrativo gravitacional entre os astros.
+
+Ações didáticas
+
+* Revisar conceitos de Força, Massa, Medidas de distância.
+* Ilustrar a construção da constante gravitacional
+* Relacionar intuitivamente as grandezas envolvidas e a aplicabilidade das mesmas entre o Macro (modelos estudados no momento) e a usuabilidade no Micro (introduzir discrepâncias) de modelos modernos de como existe, mas deve ser tratado diferenciado.
+* Revisar notação científica básica e aplicabilidade.
+
+Avaliações
+
+Avaliação será feita em 3 partes:
+
+* Participação em aula e nas atividades computacionais
+* Questionário dissertativo sobre as relações baseadas em fatos reais, sem supostos criados. (atividades propostas)
+* Prova com questões objetivas dos resultados específicos. (avalição)
+obs: Com todas avaliações tendo a mesma significatividade avaliativa.
+
+## Código python
+
+Para criar gráficos 2D simulacionais e relacionar resultados pode ser utilizado este código python, a imagem gerada pode e deve ser editada usando Inkscape para melhores resolutados estéticos.
+
+```sh
+import matplotlib.pyplot as plt
+
+
+def draw_graph(x, y):
+    plt.plot(x, y, marker='o')
+    plt.xlabel('Distância (m)')
+    plt.ylabel('Força gravitacional (N)')
+    plt.title('Força Gravitacional')
+    plt.show()
+
+
+def generate_F_r():
+    r = range(100, 1001, 50)
+    F = []
+
+    G = 6.674 * (10 ** -11)
+    m1 = 0.5
+    m2 = 1.5
+
+    for dist in r:
+        force = G * (m1 * m2) / (dist ** 2)
+        F.append(force)
+
+    draw_graph(r, F)
+
+
+if __name__ == '__main__':
+    generate_F_r()
+``` 
+
+Gráfico original em Python:
+
+![]({{site.baseurl}}/img/Figure_1.svg)
+
+Gráfico editado em Inkscape:
+
+![]({{site.baseurl}}/img/t11black.png)
+
+
+
+
+
+
+# Guia do Aluno
+
+Estrutura de conteúdos de Mecanica - Gravitação
+
+Nesta aula definiremos linearmente o conteúdo da gravitação para o final do primeiro ano do ensino médio.
+
+Abranger-se-a:
+
+* História da Astronômia limitado a questões históricas dentro do contexto momento estudantil do aluno
+* Figuras e nomes hitóricos para o desenvolvimento da área de astronômia na qualidade de lei da gravitação universal
+* Habilidades matemáticas básicas com a lei da gravitação universal
+
+## Atividades computacionais
+
+Utilizar o simulador para responder questões dissertativas propostas pelo professor, use tanto para simulações de cálculos como para satisfazer sua curiosidade, este aprendizado por ser fundamental para a compreensão do contéudo.
+
+<iframe src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_pt_BR.html" width="600" height="400" scrolling="no" allowfullscreen></iframe>
+
+Fonte[PHET colorado](https://phet.colorado.edu/pt_BR/simulation/gravity-and-orbits)
+
+
+# Aula
+
+[Gravitação](http://lief.if.ufrgs.br/~mcabral/A_distancia//projetoaula/)
+
+
+
+## Gabarito avaliação
+
+[Respostas](http://lief.if.ufrgs.br/~mcabral/A_distancia//respostas/)
+

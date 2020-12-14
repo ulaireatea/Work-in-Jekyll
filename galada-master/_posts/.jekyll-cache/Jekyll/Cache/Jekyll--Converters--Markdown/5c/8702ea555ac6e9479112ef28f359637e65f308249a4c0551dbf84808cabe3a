@@ -1,0 +1,77 @@
+I"�<p><strong>Conteúdo</strong></p>
+<ul id="markdown-toc">
+  <li><a href="#material-para-unidade-didática" id="markdown-toc-material-para-unidade-didática">Material para unidade didática</a>    <ul>
+      <li><a href="#equações-em-latex-para-unidade" id="markdown-toc-equações-em-latex-para-unidade">Equações em Latex para unidade</a></li>
+      <li><a href="#gráfico-gerado-python" id="markdown-toc-gráfico-gerado-python">Gráfico gerado Python</a></li>
+      <li><a href="#ilustração-inkscape-editada" id="markdown-toc-ilustração-inkscape-editada">Ilustração Inkscape editada</a>        <ul>
+          <li><a href="#adicional-professor" id="markdown-toc-adicional-professor">Adicional professor</a>            <ul>
+              <li><a href="#ilustrações" id="markdown-toc-ilustrações">Ilustrações</a></li>
+              <li><a href="#código-python" id="markdown-toc-código-python">Código python</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="material-para-unidade-didática">Material para unidade didática</h1>
+
+<h2 id="equações-em-latex-para-unidade">Equações em Latex para unidade</h2>
+
+\[T²=k.r³\]
+
+\[F=G{\frac{m_1 m_2}{r^2}}\]
+
+\[G=6.674 X 10^-{11}{\frac{\textbf{N}\cdotp\textbf{m}^2}{\textbf{kg}^2}}\]
+
+<h2 id="gráfico-gerado-python">Gráfico gerado Python</h2>
+
+<p><img src="/img/t11a.png" alt="" /></p>
+
+<h2 id="ilustração-inkscape-editada">Ilustração Inkscape editada</h2>
+
+<p><img src="/img/t11black.png" alt="" /></p>
+
+<h3 id="adicional-professor">Adicional professor</h3>
+
+<h4 id="ilustrações">Ilustrações</h4>
+
+<p><img src="/img/Kepler-second-law.svg" alt="" />
+Fonte: <a href="https://pt.wikipedia.org/wiki/Leis_de_Kepler#Terceira_lei_de_Kepler:_lei_dos_per%C3%ADodos">Wikipédia</a></p>
+
+<p><img src="/img/NewtonsLawOfUniversalGravitation.svg" alt="" />
+Fonte: <a href="https://pt.wikipedia.org/wiki/Lei_da_gravita%C3%A7%C3%A3o_universal">Wikipédia</a></p>
+
+<h4 id="código-python">Código python</h4>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import matplotlib.pyplot as plt
+
+
+def draw_graph<span class="o">(</span>x, y<span class="o">)</span>:
+    plt.plot<span class="o">(</span>x, y, <span class="nv">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="o">)</span>
+    plt.xlabel<span class="o">(</span><span class="s1">'Distância (m)'</span><span class="o">)</span>
+    plt.ylabel<span class="o">(</span><span class="s1">'Força gravitacional (N)'</span><span class="o">)</span>
+    plt.title<span class="o">(</span><span class="s1">'Força Gravitacional'</span><span class="o">)</span>
+    plt.show<span class="o">()</span>
+
+
+def generate_F_r<span class="o">()</span>:
+    r <span class="o">=</span> range<span class="o">(</span>100, 1001, 50<span class="o">)</span>
+    F <span class="o">=</span> <span class="o">[]</span>
+
+    G <span class="o">=</span> 6.674 <span class="k">*</span> <span class="o">(</span>10 <span class="k">**</span> <span class="nt">-11</span><span class="o">)</span>
+    m1 <span class="o">=</span> 0.5
+    m2 <span class="o">=</span> 1.5
+
+    <span class="k">for </span>dist <span class="k">in </span>r:
+        force <span class="o">=</span> G <span class="k">*</span> <span class="o">(</span>m1 <span class="k">*</span> m2<span class="o">)</span> / <span class="o">(</span>dist <span class="k">**</span> 2<span class="o">)</span>
+        F.append<span class="o">(</span>force<span class="o">)</span>
+
+    draw_graph<span class="o">(</span>r, F<span class="o">)</span>
+
+
+<span class="k">if </span>__name__ <span class="o">==</span> <span class="s1">'__main__'</span>:
+    generate_F_r<span class="o">()</span>
+</code></pre></div></div>
+:ET

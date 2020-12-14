@@ -1,0 +1,76 @@
+---
+layout: post
+title:  Tarefa 11
+date:   2020-11-17 10:03:50 +0300
+image:  t11.png
+tags:   MetCompLic
+---
+**Conteúdo**
+* TOC
+{:toc}
+
+# Material para unidade didática
+
+## Equações em Latex para unidade
+
+
+$$ T²=k.r³ $$
+
+
+$$ F=G{\frac{m_1 m_2}{r^2}} $$
+
+
+$$ G=6.674 X 10^-{11}{\frac{\textbf{N}\cdotp\textbf{m}^2}{\textbf{kg}^2}} $$
+
+
+## Gráfico gerado Python
+
+![]({{site.baseurl}}/img/t11a.png)
+
+
+## Ilustração Inkscape editada
+
+![]({{site.baseurl}}/img/t11black.png)
+
+### Adicional professor
+
+#### Ilustrações
+
+![]({{site.baseurl}}/img/Kepler-second-law.svg)
+Fonte: [Wikipédia](https://pt.wikipedia.org/wiki/Leis_de_Kepler#Terceira_lei_de_Kepler:_lei_dos_per%C3%ADodos)
+
+![]({{site.baseurl}}/img/NewtonsLawOfUniversalGravitation.svg)
+Fonte: [Wikipédia](https://pt.wikipedia.org/wiki/Lei_da_gravita%C3%A7%C3%A3o_universal)
+
+#### Código python
+
+```sh
+import matplotlib.pyplot as plt
+
+
+def draw_graph(x, y):
+    plt.plot(x, y, marker='o')
+    plt.xlabel('Distância (m)')
+    plt.ylabel('Força gravitacional (N)')
+    plt.title('Força Gravitacional')
+    plt.show()
+
+
+def generate_F_r():
+    r = range(100, 1001, 50)
+    F = []
+
+    G = 6.674 * (10 ** -11)
+    m1 = 0.5
+    m2 = 1.5
+
+    for dist in r:
+        force = G * (m1 * m2) / (dist ** 2)
+        F.append(force)
+
+    draw_graph(r, F)
+
+
+if __name__ == '__main__':
+    generate_F_r()
+```
